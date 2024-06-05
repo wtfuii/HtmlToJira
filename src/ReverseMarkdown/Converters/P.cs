@@ -2,7 +2,7 @@
 using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class P : ConverterBase
     {
@@ -30,12 +30,14 @@ namespace ReverseMarkdown.Converters
                 return Environment.NewLine + (new string(' ', length * 4));
 
             // If p is at the start of a table cell, no leading newline
-            return Td.FirstNodeWithinCell(node) ? "" : Environment.NewLine;
+            ////Todo reactivate return  Td.FirstNodeWithinCell(node) ? "" : Environment.NewLine;
+            return Environment.NewLine;
         }
 
         private static string NewlineAfter(HtmlNode node)
         {
-            return Td.LastNodeWithinCell(node) ? "" : Environment.NewLine;
+            //todo reactivate return Td.LastNodeWithinCell(node) ? "" : Environment.NewLine;
+            return "";
         }
     }
 }

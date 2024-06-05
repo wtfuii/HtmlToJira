@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class S : ConverterBase
     {
@@ -20,7 +20,7 @@ namespace ReverseMarkdown.Converters
                 return content;
             }
 
-            return content.EmphasizeContentWhitespaceGuard("~~");
+            return content.EmphasizeContentWhitespaceGuard("-");
         }
 
         private static bool AlreadyStrikethrough(HtmlNode node)

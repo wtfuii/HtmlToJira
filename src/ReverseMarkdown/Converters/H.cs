@@ -2,7 +2,7 @@
 using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class H : ConverterBase
     {
@@ -23,7 +23,7 @@ namespace ReverseMarkdown.Converters
                 return TreatChildren(node);
             }
 
-            var prefix = new string('#', System.Convert.ToInt32(node.Name.Substring(1)));
+            var prefix = $"h{System.Convert.ToInt32(node.Name.Substring(1))}.";
 
             return $"{Environment.NewLine}{prefix} {TreatChildren(node)}{Environment.NewLine}";
         }

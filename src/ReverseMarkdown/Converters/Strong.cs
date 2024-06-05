@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class Strong : ConverterBase
     {
@@ -27,7 +27,7 @@ namespace ReverseMarkdown.Converters
                 ? " "
                 : "";
 
-            return content.EmphasizeContentWhitespaceGuard("**", spaceSuffix);
+            return content.EmphasizeContentWhitespaceGuard("*", spaceSuffix);
         }
 
         private static bool AlreadyBold(HtmlNode node)

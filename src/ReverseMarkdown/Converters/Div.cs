@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class Div : ConverterBase
     {
@@ -43,17 +43,19 @@ namespace ReverseMarkdown.Converters
             }
 
             var prefix = Environment.NewLine;
-
-            if (Td.FirstNodeWithinCell(node))
-            {
-                prefix = string.Empty;
-            } 
-            else if (Converter.Config.SuppressDivNewlines)
-            {
-                prefix = string.Empty;
-            }
             
-            return $"{prefix}{content}{(Td.LastNodeWithinCell(node) ? "" : Environment.NewLine)}";
+            return Environment.NewLine;
+
+            // todo reactivate  if (Td.FirstNodeWithinCell(node))
+            // {
+            //     prefix = string.Empty;
+            // } 
+            // else if (Converter.Config.SuppressDivNewlines)
+            // {
+            //     prefix = string.Empty;
+            // }
+            //
+            // return $"{prefix}{content}{(Td.LastNodeWithinCell(node) ? "" : Environment.NewLine)}";
         }
     }
 }

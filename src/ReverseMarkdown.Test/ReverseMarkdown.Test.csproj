@@ -49,4 +49,9 @@
       <DependentUpon>ConverterTests.WhenThereIsUnorderedListWithNestedOrderedList_ThenConvertToMarkdownListWithNestedList.verified.md</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="JiraConverterTests.ConvertBold.verified.md">
+      <DependentUpon>JiraConverterTests.cs</DependentUpon>
+    </Content>
+  </ItemGroup>
 </Project>

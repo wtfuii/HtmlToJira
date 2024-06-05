@@ -3,7 +3,7 @@ using System.Linq;
 
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class Em : ConverterBase
     {
@@ -30,7 +30,7 @@ namespace ReverseMarkdown.Converters
                 ? " "
                 : "";
 
-            return content.EmphasizeContentWhitespaceGuard("*", spaceSuffix);
+            return content.EmphasizeContentWhitespaceGuard("_", spaceSuffix);
         }
 
         private static bool AlreadyItalic(HtmlNode node)

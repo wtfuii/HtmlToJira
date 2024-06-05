@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class Code : ConverterBase
     {

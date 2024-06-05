@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.Converters
+namespace ReverseMarkdown.ConvertersMarkdown
 {
     public class Text : ConverterBase
     {
