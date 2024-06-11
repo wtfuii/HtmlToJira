@@ -1,1 +1,0 @@
-This text has image <img alt="alt" src="http://test.com/images/test.png">. Next line of text

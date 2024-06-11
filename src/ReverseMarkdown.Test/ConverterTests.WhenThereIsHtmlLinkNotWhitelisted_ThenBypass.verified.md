@@ -1,1 +1,0 @@
-Leave [http](http://example.com), [https](https://example.com), [ftp](ftp://example.com), [ftps](ftps://example.com), [file](file://example.com). Remove data, tel and whatever

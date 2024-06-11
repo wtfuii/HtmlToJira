@@ -1,1 +1,0 @@
-[example.com](ftp://example.com)

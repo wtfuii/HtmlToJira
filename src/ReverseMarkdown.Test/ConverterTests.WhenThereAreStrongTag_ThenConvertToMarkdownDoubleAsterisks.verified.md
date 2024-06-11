@@ -1,1 +1,0 @@
-This paragraph contains **bold** text

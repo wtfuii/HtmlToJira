@@ -1,4 +1,0 @@
-﻿the
-fox
-jumps
-over

@@ -1,1 +1,0 @@
-[Something intact](https://example.com)
