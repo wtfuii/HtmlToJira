@@ -16,6 +16,7 @@ namespace ReverseMarkdown.ConvertersMarkdown
         {
             var content = TreatChildren(node).TrimEnd();
             var underline = "";
+            var separator = "";
 
             if (string.IsNullOrWhiteSpace(content))
             {
@@ -26,12 +27,9 @@ namespace ReverseMarkdown.ConvertersMarkdown
             // then table need to be indented as well
             var indent = IndentationFor(node);
 
-            if (IsTableHeaderRow(node) || UseFirstRowAsHeaderRow(node))
-            {
-                underline = UnderlineFor(node, indent);
-            }
+            separator = IsTableHeaderRow(node) ? "||" : "|";
 
-            return $"{indent}|{content}{Environment.NewLine}{underline}";
+            return $"{separator}{content}{Environment.NewLine}";
         }
 
         private bool UseFirstRowAsHeaderRow(HtmlNode node)

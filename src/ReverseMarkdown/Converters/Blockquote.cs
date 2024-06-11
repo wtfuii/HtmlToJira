@@ -16,13 +16,7 @@ namespace ReverseMarkdown.ConvertersMarkdown
         {
             var content = TreatChildren(node);
 
-            // get the lines based on carriage return and prefix "> " to each line
-            var lines = content.ReadLines().Select(item => "> " + item + Environment.NewLine);
-
-            // join all the lines to a single line
-            var result = lines.Aggregate(string.Empty, (current, next) => current + next);
-
-            return $"{Environment.NewLine}{Environment.NewLine}{result}{Environment.NewLine}";
+            return $"{Environment.NewLine}{{quote}}{Environment.NewLine}{content}{Environment.NewLine}{{quote}}{Environment.NewLine}";
         }
     }
 }

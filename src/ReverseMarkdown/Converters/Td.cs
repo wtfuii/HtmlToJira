@@ -18,11 +18,12 @@ namespace ReverseMarkdown.ConvertersMarkdown
 
         public override string Convert(HtmlNode node)
         {
+            var separator = node.Name.ToLower().Equals("th") ? "||" : "|";
             var content = TreatChildren(node)
                 .Chomp()
                 .Replace(Environment.NewLine, "<br>");
 
-            return $" {content} |";
+            return $"{content}{separator}";
         }
 
         /// <summary>
