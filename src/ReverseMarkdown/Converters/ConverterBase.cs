@@ -1,8 +1,7 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public abstract class ConverterBase : IConverter
     {

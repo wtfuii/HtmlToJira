@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public class Table : ConverterBase
     {

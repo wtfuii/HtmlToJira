@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public class Div : ConverterBase
     {

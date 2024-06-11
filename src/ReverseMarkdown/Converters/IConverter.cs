@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public interface IConverter
     {

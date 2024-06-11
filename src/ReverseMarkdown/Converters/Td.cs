@@ -1,8 +1,8 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public class Td : ConverterBase
     {

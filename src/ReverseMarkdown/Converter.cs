@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
-using ReverseMarkdown.ConvertersMarkdown;
+using ReverseMarkdown.Converters;
 
 namespace ReverseMarkdown
 {

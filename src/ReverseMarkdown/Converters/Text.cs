@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
 using HtmlAgilityPack;
 
-namespace ReverseMarkdown.ConvertersMarkdown
+namespace ReverseMarkdown.Converters
 {
     public class Text : ConverterBase
     {
