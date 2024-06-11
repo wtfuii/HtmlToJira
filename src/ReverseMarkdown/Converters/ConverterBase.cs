@@ -55,20 +55,25 @@ namespace ReverseMarkdown.ConvertersMarkdown
 
         protected static string IndentationFor(HtmlNode node, bool zeroIndex=false)
         {
+            return new string(' ', IndentationLevelFor(node, zeroIndex)*4);
+        }
+        
+        protected static int IndentationLevelFor(HtmlNode node, bool zeroIndex = false)
+        {
             var length = node.Ancestors("ol").Count() + node.Ancestors("ul").Count();
 
             // li not required to have a parent ol/ul
             if (length == 0)
             {
-                return string.Empty;
+                return 0;
             }
 
             if (zeroIndex)
             {
-                length -= 1;
+                return length - 1;
             }
 
-            return new string(' ', length*4);
+            return length;
         }
 
         public abstract string Convert(HtmlNode node);

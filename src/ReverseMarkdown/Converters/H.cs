@@ -25,7 +25,7 @@ namespace ReverseMarkdown.ConvertersMarkdown
 
             var prefix = $"h{System.Convert.ToInt32(node.Name.Substring(1))}.";
 
-            return $"{Environment.NewLine}{prefix} {TreatChildren(node)}{Environment.NewLine}";
+            return $"{Environment.NewLine}{prefix} {TreatChildren(node)}";
         }
     }
 }

@@ -26,23 +26,22 @@ namespace ReverseMarkdown.ConvertersMarkdown
             }
 
             var content = TreatChildren(node);
-            var indentation = IndentationFor(node, true);
+            var indentationLevel = IndentationLevelFor(node, true);
             var prefix = PrefixFor(node);
 
-            return $"{indentation}{prefix}{content.Chomp()}{Environment.NewLine}";
+            return $"{new string(prefix, indentationLevel)} {content.Chomp()}{Environment.NewLine}";
         }
 
-        private string PrefixFor(HtmlNode node)
+        private char PrefixFor(HtmlNode node)
         {
             if (node.ParentNode != null && node.ParentNode.Name == "ol")
             {
                 // index are zero based hence add one
-                var index = node.ParentNode.SelectNodes("./li").IndexOf(node) + 1;
-                return $"{index}. ";
+                return '#';
             }
             else
             {
-                return $"{Converter.Config.ListBulletChar} ";
+                return '*';
             }
         }
     }
